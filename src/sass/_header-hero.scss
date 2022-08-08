@@ -641,9 +641,6 @@ animation: bounce-in-right 1.7s both;
         // }
  }       
  
-
-        
-
         @include mq(desctop) {
         font-size: 14px;
         line-height: 140%;
@@ -704,7 +701,7 @@ animation: bounce-in-right 1.7s both;
 
 //  Всплывающее меню внизу Героя
  .header__menu-below {
-    width: 144px ;
+    width: 120px ;
     position: absolute;
     bottom: 28px;
     transform: translateY(0);
@@ -712,10 +709,20 @@ animation: bounce-in-right 1.7s both;
     opacity 700ms linear;
     opacity: 0;
 
+    // ИЗМЕНЕНИЯ===============================================
+     @include mq(desctop) {
+        width: 200px;
+        transform: translateY(-23%);
+        }
+
     &.is-open {
         opacity: 1;
-        transform: translateY(-105%);
-        
+        transform: translateY(-105%); 
+
+// ИЗМЕНЕНИЯ===============================================
+        @include mq(desctop) {
+            transform: translateY(-130%);
+            }
     }
     
  }
@@ -724,6 +731,12 @@ animation: bounce-in-right 1.7s both;
     font-size: 8px;
     line-height: 150%;
     color: #FFFFFF;
+
+    // ИЗМЕНЕНИЯ====================================================================
+    @include mq(desctop) {
+            font-size: 14px;
+            line-height: 140%;
+    }
     
  }
 
